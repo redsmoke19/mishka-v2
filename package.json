@@ -23,6 +23,7 @@
     "gulp-csso": "^3.0.1",
     "gulp-filter": "^5.1.0",
     "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "^1.2.1",
     "gulp-pug": "^4.0.1",
     "gulp-pug-inheritance": "^0.2.1",
@@ -30,7 +31,11 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^2.2.0",
     "gulp-uglify": "^3.0.2",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-pngquant": "^7.0.0",
     "pug": "^2.0.3"
   },
   "dependencies": {

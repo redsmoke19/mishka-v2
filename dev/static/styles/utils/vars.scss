@@ -3,7 +3,7 @@ $white: #ffffff;
 $black: #000000;
 
 // Sizes
-$base-font-size: 16px;
+$base-font-size: 15px;
 
 $breakpoints: (
   "phone"       : 400px,
@@ -16,6 +16,8 @@ $breakpoints: (
   "desktop-wide": 1440px
 );
 
-$content-size: 1024px;
+$mobile-size: 320px;
 
 // Fonts
+$main-font: "Open Sans Bold", Arial, sans-serif;
+$second-font: "Open Sans Regular", Arial, sans-serif;

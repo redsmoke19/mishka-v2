@@ -18,7 +18,9 @@ $.gulp.task('dev', $.gulp.series(
   $.gulp.parallel(
     'pug',
     'fonts',
-    'styles:dev'
+    'styles:dev',
+    'img:dev',
+    'svg'
   )
 ));
 
