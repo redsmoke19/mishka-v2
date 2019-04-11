@@ -1,0 +1,19 @@
+.main-nav {
+  &__list {
+
+  }
+}
+.site-list {
+  &__item {
+    padding: 30px 45px;
+  }
+  &__link {
+    color: $black;
+    font-size: 17px;
+  }
+}
+.user-list {
+  &__item {
+    padding: 30px 45px;
+  }
+}

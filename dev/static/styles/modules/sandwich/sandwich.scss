@@ -1,0 +1,34 @@
+.sandwich {
+  cursor: pointer;
+  height: 14px;
+  right: 0;
+  position: absolute;
+  width: 20px;
+  &--active {
+    .sandwich__line {
+      &--top {
+        top: 10px;
+        transform: rotate(45deg);
+      }
+      &--middle { opacity: 0; }
+      &--bottom {
+        top: 10px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__line {
+    background-color: $black;
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: all linear .4s;
+    width: 100%;
+    &--top { top: 0; }
+    &--middle { top: 6px; }
+    &--bottom { top: 12px; }
+  }
+  @media screen and (max-width: $tablet-size) { display: block; }
+  @media screen and (max-width: $desktop-size) { display: block; }
+}

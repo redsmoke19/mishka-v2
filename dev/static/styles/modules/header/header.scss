@@ -1,0 +1,11 @@
+.header {
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    height: 80px;
+    position: relative;
+  }
+  &__logo {
+    margin: 0 auto;
+  }
+}

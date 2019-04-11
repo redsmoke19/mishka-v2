@@ -17,7 +17,9 @@ $breakpoints: (
 );
 
 $mobile-size: 320px;
+$tablet-size: 768px;
+$desktop-size: 1150px;
 
 // Fonts
-$main-font: "Open Sans Bold", Arial, sans-serif;
-$second-font: "Open Sans Regular", Arial, sans-serif;
+$main-font: 'Open Sans Bold', sans-serif;
+$second-font: 'Open Sans Regular', sans-serif;

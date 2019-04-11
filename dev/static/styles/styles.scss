@@ -8,9 +8,11 @@ html {
 }
 
 body {
-  font-family: $main-font;
+  color: $black;
+  font-family: $second-font;
   font-size: $base-font-size;
   height: 100%;
+  line-height: 24px;
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
@@ -54,7 +56,23 @@ button { outline: none; }
 .container {
   margin: 0 auto;
   max-width: $mobile-size;
+  padding: 0 30px;
   width: 100%;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 //Модули
