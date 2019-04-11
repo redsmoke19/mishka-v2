@@ -1,19 +1,41 @@
 .main-nav {
   &__list {
-
+    font-family: $main-font;
+    font-size: 17px;
   }
 }
 .site-list {
   &__item {
-    padding: 30px 45px;
+    border-bottom: 1px solid $border-color;
   }
   &__link {
     color: $black;
-    font-size: 17px;
+    display: block;
+    padding: 30px 30px 30px 45px;
   }
 }
 .user-list {
   &__item {
-    padding: 30px 45px;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+    &--search {
+      left: 0;
+      opacity: 0.2;
+      position: absolute;
+      top: 35px;
+      @include size(21px,18px);
+    }
+    &--card {
+      left: 0;
+      opacity: 0.2;
+      position: absolute;
+      top: 35px;
+      @include size(21px,18px);
+    }
+  }
+  &__link {
+    color: $black;
+    display: block;
+    padding: 30px 30px 30px 45px;
   }
 }
