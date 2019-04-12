@@ -1,9 +1,10 @@
 .sandwich {
-  cursor: pointer;
-  height: 14px;
-  right: 0;
-  position: absolute;
   width: 20px;
+  height: 14px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
   &--active {
     .sandwich__line {
       &--top {
@@ -18,17 +19,16 @@
     }
   }
   &__line {
-    background-color: $black;
     display: block;
-    height: 2px;
-    left: 0;
-    position: absolute;
-    transition: all linear .4s;
     width: 100%;
+    height: 2px;
+    background-color: $black;
+    position: absolute;
+    left: 0;
+    transition: all linear .4s;
     &--top { top: 0; }
     &--middle { top: 6px; }
     &--bottom { top: 12px; }
   }
-  @media screen and (max-width: $tablet-size) { display: block; }
-  @media screen and (max-width: $desktop-size) { display: block; }
+  @media screen and (min-width: $tablet-size) { display: none; }
 }

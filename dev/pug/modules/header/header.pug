@@ -1,10 +1,11 @@
 header.header
-    .container
-        .header__wrapper
-            a.header__logo
-                +icon('mobile-logo','header-logo--image',86,35,'Логотип магазина Мишка')
-            .header__sandwich.sandwich
-                .sandwich__line.sandwich__line--top
-                .sandwich__line.sandwich__line--middle
-                .sandwich__line.sandwich__line--bottom
-        include navigation
+    .header__wrapper
+        a.header__logo
+            +icon('mobile-logo','header__logo--mobile')
+            +icon('tablet-logo','header__logo--tablet')
+            +icon('desktop-logo','header__logo--desktop')
+        .header__sandwich.sandwich.sandwich--active
+            .sandwich__line.sandwich__line--top
+            .sandwich__line.sandwich__line--middle
+            .sandwich__line.sandwich__line--bottom
+    include navigation

@@ -16,11 +16,11 @@ module.exports = function () {
                 }
             }))
             .pipe(cheerio({
-                run: function ($) {
-                    $('[fill]').removeAttr('fill');
-                    $('[stroke]').removeAttr('stroke');
-                    $('[style]').removeAttr('style');
-                },
+                // run: function ($) {
+                //     // $('[fill]').removeAttr('fill');
+                //     // // $('[stroke]').removeAttr('stroke');
+                //     // // $('[style]').removeAttr('style');
+                // },
                 parserOptions: {xmlMode: true}
             }))
             .pipe(replace('&gt;', '>'))
