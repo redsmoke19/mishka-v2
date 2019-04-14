@@ -1,41 +1,130 @@
 .main-nav {
-  margin: 0 auto;
+  position: relative;
+  @media screen and (min-width: $tablet-size) {
+    display: flex;
+    flex-direction: row;
+    padding: 0 50px;
+  }
+  &__top {
+    @media screen and (min-width: $tablet-size) {
+      position: absolute;
+      height: 89px;
+    }
+  }
+  &__bottom {
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+  &__logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    box-shadow: inset 0 -1px 0 0 #e5e5e5;
+    @media screen and (min-width: $tablet-size) {
+      height: 88px;
+      box-shadow: none;
+    }
+    &--mobile {
+      display: block;
+      @include size(86px, 35px);
+      @media screen and (min-width: $tablet-size) { display: none; }
+    }
+    &--tablet {
+      display: none;
+      @include size(112px, 46px);
+      @media screen and (min-width: $tablet-size) and (max-width: $desktop-size) {
+        display: block;
+      }
+    }
+    &--desktop {
+      display: none;
+      @include size(149px, 72px);
+      @media screen and (min-width: $desktop-size) { display: block; }
+    }
+  }
   &__list {
     font-family: $main-font;
     font-size: 17px;
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__item {
+    position: relative;
+    padding: 28px 30px 28px 75px;
+    min-width: 83px;
+    box-shadow: inset 0 -1px 0 0 #e5e5e5;
+    @media screen and (min-width: $tablet-size) { box-shadow: none; }
+  }
+  &__text {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      position: relative;
+      color: $base-text-color;
+      margin-left: auto;
+      padding: 25px 0;
+      order: 3;
+      z-index: 1;
+    }
   }
 }
 .site-list {
+  position: relative;
+  z-index: 1;
+  @media screen and (min-width: $tablet-size) {
+    margin-right: auto;
+    order: 2;
+  }
   &__item {
-    border-bottom: 1px solid $border-color;
+    @media screen and (min-width: $tablet-size) {
+      padding: 25px 0;
+      & *:not(last-child) { margin-right: 35px; }
+    }
+  }
+  &__link {
+    color: $black;
+    @media screen and (min-width: $tablet-size) { font-size: 15px; }
+  }
+}
+.user-list {
+  @media screen and (min-width: $tablet-size) {
+    flex-basis: 100%;
+    justify-content: flex-end;
+    order: 1;
+  }
+  &__item {
+    @media screen and (min-width: $tablet-size){
+      padding: 32px 0 32px 32px;
+      box-shadow: -1px 0 0 0 $border-color;
+    }
   }
   &__link {
     display: block;
     color: $black;
-    padding: 28px 30px 28px 75px;
-  }
-}
-.user-list {
-  &__item {
-    border-bottom: 1px solid $border-color;
-  }
-  &__link {
-    color: $black;
-    padding: 30px 0;
-    position: relative;
-    &--search {
-      left: 30px;
-      opacity: 0.2;
-      position: absolute;
-      top: 35px;
-      @include size(18px,18px);
-    }
     &--card {
-      left: 30px;
-      opacity: 0.2;
-      position: absolute;
-      top: 35px;
-      @include size(21px,18px);
+      @media screen and (min-width: $tablet-size) { padding-left: 50px; }
     }
+  }
+  &__image {
+    position: absolute;
+    top: 33px;
+    left: 30px;
+    opacity: 0.2;
+    &--search {
+      @include size(18px,18px);
+      @media screen and (min-width: $tablet-size) {
+        position: relative;
+        left: 0;
+        top: 0;
+      }
+    }
+    &--card { @include size(21px,18px); }
   }
 }

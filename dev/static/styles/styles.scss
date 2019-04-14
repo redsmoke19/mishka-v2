@@ -8,10 +8,11 @@ html {
 }
 
 body {
+  width: 100%;
+  max-width: 1150px;
   color: $black;
   font-family: $second-font;
   font-size: $base-font-size;
-  height: 100%;
   line-height: 24px;
 }
 
@@ -55,10 +56,16 @@ button { outline: none; }
 
 .container {
   margin: 0 auto;
-  max-width: $mobile-size;
+  max-width: 1150px;
   padding: 0 30px;
   position: relative;
   width: 100%;
+  @media screen and (max-width: $tablet-size) {
+    padding: 0;
+  }
+  @media screen and (max-width: $desktop-size) {
+    padding: 0;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -74,6 +81,22 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.text__hidden {
+  @media screen and (min-width: $tablet-size){
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    -webkit-clip-path: inset(100%);
+  }
 }
 
 //Модули

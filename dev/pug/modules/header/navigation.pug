@@ -1,13 +1,27 @@
 nav.main-nav
-    ul.main-nav__list.site-list
-        li.site-list__item
-            a(href="#").site-list__link Каталог товаров
-        li.site-list__item
-            a(href="#").site-list__link Вязание на заказ
-    ul.main-nav__list.user-list
-        li.user-list__item
-            a(href="#").user-list__link Поиск по сайту
-                +icon('icon-search','user-list__link--search')
-        li.user-list__item
-            a(href="#").user-list__link Корзина: пока пуста
-                +icon('icon-card','user-list__link--card')
+    .main-nav__top
+        a.main-nav__logo
+            +icon('mobile-logo','main-nav__logo--mobile')
+            +icon('tablet-logo','main-nav__logo--tablet')
+            +icon('desktop-logo','main-nav__logo--desktop')
+        .header__sandwich.sandwich.sandwich--active
+            .sandwich__line.sandwich__line--top
+            .sandwich__line.sandwich__line--middle
+            .sandwich__line.sandwich__line--bottom
+    .main-nav__bottom
+        ul.main-nav__list.site-list
+            li.main-nav__item.site-list__item
+                a(href="#").site-list__link Каталог товаров
+            li.main-nav__item.site-list__item
+                a(href="#").site-list__link Вязание на заказ
+        ul.main-nav__list.user-list
+            li.main-nav__item.user-list__item
+                a(href="#").user-list__link
+                    span.user-list__text.text__hidden Поиск по сайту
+                    +icon('icon-search','user-list__image user-list__image--search')
+            li.main-nav__item.user-list__item
+                a(href="#").user-list__link.user-list__link--card
+                    +icon('icon-card','user-list__image user-list__image--card')
+                    span Корзина:
+                    span пока пуста
+        p.main-nav__text Бесплатная доставка по России

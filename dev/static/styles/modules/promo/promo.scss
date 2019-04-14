@@ -3,7 +3,7 @@
     margin: 0 auto;
   }
   &__title {
-    background: url("/static/images/general/hero-mobile.jpg") no-repeat center -20px;
+    background: $bg-color-gray url("/static/images/general/hero-mobile.jpg") no-repeat center -20px;
     font-size: 27px;
     line-height: 30px;
     padding: 70px 30px 120px 30px;
