@@ -3,12 +3,14 @@
   @media screen and (min-width: $tablet-size) {
     display: flex;
     flex-direction: row;
-    padding: 0 50px;
   }
   &__top {
     @media screen and (min-width: $tablet-size) {
       position: absolute;
-      height: 89px;
+      height: 88px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      left: calc(50% - 75px);
     }
   }
   &__bottom {
@@ -37,13 +39,13 @@
     &--tablet {
       display: none;
       @include size(112px, 46px);
-      @media screen and (min-width: $tablet-size) and (max-width: $desktop-size) {
+      @media screen and (min-width: $tablet-size) and (max-width: 1149px) {
         display: block;
       }
     }
     &--desktop {
       display: none;
-      @include size(149px, 72px);
+      @include size(150px, 72px);
       @media screen and (min-width: $desktop-size) { display: block; }
     }
   }
@@ -69,8 +71,8 @@
       position: relative;
       color: $base-text-color;
       margin-left: auto;
-      padding: 25px 0;
-      order: 3;
+      padding: 15px 0;
+      order: 4;
       z-index: 1;
     }
   }
@@ -82,15 +84,27 @@
     margin-right: auto;
     order: 2;
   }
+  @media screen and (min-width: $desktop-size) {
+    flex-basis: 50%;
+    order: 1;
+  }
   &__item {
     @media screen and (min-width: $tablet-size) {
-      padding: 25px 0;
+      padding: 15px 0;
       & *:not(last-child) { margin-right: 35px; }
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 32px 0 32px 32px;
+      &:first-child {
+        box-shadow: 1px 0 0 0 $border-color;
+        padding-left: 0;
+      }
     }
   }
   &__link {
     color: $black;
     @media screen and (min-width: $tablet-size) { font-size: 15px; }
+    @media screen and (min-width: $tablet-size) { font-size: 17px; }
   }
 }
 .user-list {
@@ -98,6 +112,10 @@
     flex-basis: 100%;
     justify-content: flex-end;
     order: 1;
+  }
+  @media screen and (min-width: $desktop-size) {
+    flex-basis: 50%;
+    order: 2;
   }
   &__item {
     @media screen and (min-width: $tablet-size){
@@ -126,5 +144,23 @@
       }
     }
     &--card { @include size(21px,18px); }
+  }
+}
+.site-offers {
+  display: none;
+  @media screen and (min-width: $desktop-size) {
+    display: flex;
+    order: 3;
+    z-index: 1;
+  }
+  &__item {
+    padding: 15px 0;
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+  &__link {
+    color: $black;
+    font-family: $main-font;
   }
 }

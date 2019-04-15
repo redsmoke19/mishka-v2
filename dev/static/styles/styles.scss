@@ -9,7 +9,7 @@ html {
 
 body {
   width: 100%;
-  max-width: 1150px;
+  max-width: 100%;
   color: $black;
   font-family: $second-font;
   font-size: $base-font-size;
@@ -56,15 +56,15 @@ button { outline: none; }
 
 .container {
   margin: 0 auto;
-  max-width: 1150px;
-  padding: 0 30px;
+  max-width: 100%;
+  padding: 0 50px;
   position: relative;
   width: 100%;
-  @media screen and (max-width: $tablet-size) {
+  @media screen and (max-width: 767px) {
     padding: 0;
   }
-  @media screen and (max-width: $desktop-size) {
-    padding: 0;
+  @media screen and (min-width: $desktop-size){
+    width: 1150px;
   }
 }
 
