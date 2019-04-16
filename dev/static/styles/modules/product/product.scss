@@ -8,7 +8,36 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      order: 1;
       margin-bottom: 50px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  }
+  &__middle {
+    order: 2;
+    @media screen and (min-width: $tablet-size) {
+      width: 100%;
+      padding-right: 377px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+      margin-left: 175px;
+      max-width: 291px;
+    }
+  }
+  &__bottom {
+    order: 4;
+    @media screen and (min-width: $tablet-size) {
+      width: 100%;
+      padding-right: 377px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+      margin-left: 175px;
+      max-width: 291px;
     }
   }
   &__title {
@@ -16,10 +45,15 @@
     font-size: $title-font-size;
     line-height: 30px;
     padding: 30px 0 5px 0;
+    z-index: 1;
     @media screen and (min-width: $tablet-size) {
       font-size: 43px;
       line-height: 50px;
       padding: 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      font-size: 53px;
+      line-height: 57px;
     }
   }
   &__week {
@@ -34,28 +68,79 @@
       width: 120px;
       margin: 0;
     }
+    @media screen and (min-width: $desktop-size) {
+      padding-left: 45px;
+      margin-right: 50px;
+      line-height: 17px;
+    }
   }
   &__description {
     color: $base-text-color;
     margin-bottom: 30px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 17px;
+      line-height: 30px;
+      margin-bottom: 32px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 50px;
+    }
   }
   &__list {
+    color: $base-text-color;
     margin-bottom: 30px;
+    @media screen and (min-width: $tablet-size) {
+      margin-bottom: 55px;
+    }
+    @media screen and (min-width: 992px) {
+      margin-bottom: 85px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 102px;
+    }
   }
   &__product-picture {
     margin-bottom: 25px;
+    order: 3;
+    @media screen and (min-width: $tablet-size) {
+      position: absolute;
+      right: 50px;
+      top: 100px;
+      margin: 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      top: -60px;
+    }
   }
   &__product-image {
     width: 100%;
     height: auto;
     min-height: 315px;
+    @media screen and (min-width: $tablet-size) {
+      width: auto;
+      height: auto;
+      min-width: 334px;
+      min-height: 404px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      min-width: 525px;
+      min-height: 636px;
+    }
   }
   &__price {
+    color: $base-text-color;
     font-family: $main-font;
     font-size: 17px;
     line-height: 24px;
     text-align: center;
     margin-bottom: 25px;
+    @media screen and (min-width: $tablet-size) {
+      margin-bottom: 28px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }
 

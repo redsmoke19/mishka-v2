@@ -67,7 +67,7 @@ button { outline: none; }
 }
 
 .container__mobile {
-  @media screen and (max-width: $tablet-size) {
+  @media screen and (max-width: 767px) {
     padding: 0 30px;
   }
 }

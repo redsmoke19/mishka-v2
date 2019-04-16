@@ -3,6 +3,9 @@
   @media screen and (min-width: $tablet-size) {
     margin-bottom: 50px;
   }
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 130px;
+  }
   &::after {
     @media screen and (min-width: $tablet-size) {
       content: "";
