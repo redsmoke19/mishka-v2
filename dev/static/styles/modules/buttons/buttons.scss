@@ -1,0 +1,16 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: $main-font;
+  min-height: 52px;
+  color: $base-text-color;
+  font-size: 17px;
+  line-height: 20px;
+  background: $white;
+  border: 2px solid $base-text-color;
+  text-transform: uppercase;
+  padding: 10px;
+  white-space: normal;
+}

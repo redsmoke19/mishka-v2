@@ -56,15 +56,19 @@ button { outline: none; }
 
 .container {
   margin: 0 auto;
-  max-width: 100%;
   padding: 0 50px;
   position: relative;
-  width: 100%;
   @media screen and (max-width: 767px) {
     padding: 0;
   }
   @media screen and (min-width: $desktop-size){
     width: 1150px;
+  }
+}
+
+.container__mobile {
+  @media screen and (max-width: $tablet-size) {
+    padding: 0 30px;
   }
 }
 

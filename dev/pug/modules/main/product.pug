@@ -1,18 +1,23 @@
 section.product
-    h2.product__title Вязаные корзинки
-    span.product__week Товар недели
-    p.product__description Экологически чистая пряжа, ручной работы. Доступты в шести расцветках, трех размерах.
-    table.product__list
-        tr
-            td.product__parameter Цвет:
-            td.product__value "Тиффани"/серый
-        tr
-            td.product__parameter Диаметр:
-            td.product__value 25 см
-        tr
-            td.product__parameter Высота
-            td.product__value 15 см
-    a.product__product-picture
-        img.product__product-image(src="http://placehold.it/260x315" width=260 height=315 alt="Вязаные корзинки")
-    p.product__price Цена: 990 руб.
-    button(type="button").button.product__button Заказать
+    .container.container__mobile
+        .product__wrapper
+            .product__top
+                h2.product__title Вязаные корзинки
+                span.product__week Товар недели
+            .product__middle
+                p.product__description Экологически чистая пряжа, ручной работы. Доступты в шести расцветках, трех размерах.
+                table.product__list.product-table
+                    tr.product-table__row
+                        td.product-table__parameter Цвет:
+                        td.product-table__value «Тиффани»/серый
+                    tr.product-table__row
+                        td.product-table__parameter Диаметр:
+                        td.product-table__value 25 см
+                    tr.product-table__row
+                        td.product-table__parameter Высота
+                        td.product-table__value 15 см
+            .product__product-picture
+                img.product__product-image(src="/static/images/general/triple-set-mobile.jpg" width=260 height=315 alt="Вязаные корзинки")
+            .product__bottom
+                p.product__price Цена: 990 руб.
+                button(type="button").button.product__button Заказать
