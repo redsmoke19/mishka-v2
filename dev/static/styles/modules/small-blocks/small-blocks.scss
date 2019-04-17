@@ -1,0 +1,13 @@
+.title {
+  font-family: $main-font;
+  font-size: $title-font-size;
+  line-height: 30px;
+  @media screen and (min-width: $tablet-size) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+  @media screen and (min-width: $desktop-size) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

@@ -1,0 +1,60 @@
+.about-us {
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $tablet-size) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    @media screen and (min-width: $tablet-size) {
+      &--ball {
+        order: 1;
+      }
+      &--money {
+        order: 2;
+      }
+    }
+  }
+}
+
+.about-list {
+  font-family: $main-font;
+  font-size: 17px;
+  line-height: 20px;
+  &__item {
+    padding-right: 50px;
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+    @media screen and (min-width: $tablet-size){
+      flex-basis: 50%;
+    }
+  }
+  &__image {
+    fill: #63d1bb;
+    margin-bottom: 15px;
+    &--flower {
+      @include size(32px,37px);
+    }
+    &--money {
+      @include size(47px,27px);
+    }
+    &--heart {
+      @include size(34px,27px);
+    }
+    &--ball {
+      @include size(35px,34px);
+    }
+    &--rocket {
+      @include size(55px,23px);
+    }
+    &--gift {
+      @include size(33px,32px);
+    }
+  }
+}
