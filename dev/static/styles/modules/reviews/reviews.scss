@@ -3,6 +3,43 @@
   @media screen and (min-width: $tablet-size) {
     margin-bottom: 200px;
   }
+  @media screen and (min-width: $desktop-size) {
+    width: 1150px;
+    margin: 0 auto;
+  }
+  &__image {
+    @media screen and (min-width: $tablet-size) {
+      background: url("/static/images/general/review.jpg") no-repeat;
+      width: 100%;
+      max-height: 457px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      background: none;
+      &::before {
+        content: "";
+        top: 0;
+        left: 50px;
+        position: absolute;
+        background: url("/static/images/general/review.jpg") no-repeat;
+        width: 350px;
+        height: 457px;
+      }
+    }
+  }
+  &::before {
+    @media screen and (min-width: $tablet-size) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("/static/images/general/review.jpg") no-repeat;
+      width: 350px;
+      height: 457px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      left: 50px;
+    }
+  }
   &::after {
     content: "";
     position: absolute;
@@ -16,7 +53,7 @@
       background: url("/static/images/general/zigzag-line-tablet.png") repeat-x center;
     }
     @media screen and (min-width: $desktop-size) {
-      bottom: -96px;
+      bottom: -193px;
       left: calc(50% - 575px);
       background: url("/static/images/general/zigzag-line-desktop.png") no-repeat center;
       height: 23px;
@@ -29,7 +66,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
+      padding-top: 80px;
+    }
+  }
+  &__title {
+    @media screen and (min-width: $desktop-size) {
+      margin-left: 175px;
     }
   }
   &__write {
@@ -51,20 +94,40 @@
     color: $base-text-color;
     line-height: 30px;
     @include clearfix;
+    @media screen and (min-width: $tablet-size) {
+    padding-bottom: 46px;
+  }
+    @media screen and (min-width: $desktop-size) {
+      padding-bottom: 86px;
+    }
   }
   &__item {
     margin-bottom: 30px;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+    }
   }
   &__text {
     margin-bottom: 35px;
     @media screen and (min-width: $tablet-size) {
       font-size: 17px;
-      margin-bottom: 65px;
+      margin-bottom: 60px;
+      overflow: auto;
+      height: 120px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 45px;
+      margin-left: 175px;
+      padding-right: 90px;
+      height: 90px;
     }
   }
   &__authors {
     @media screen and (min-width: $tablet-size) {
       float: left;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin-left: 175px;
     }
   }
   &__author {
