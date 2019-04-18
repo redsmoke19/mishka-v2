@@ -1,6 +1,16 @@
 .about-us {
+  margin-bottom: 60px;
+  @media screen and (min-width: $tablet-size) {
+    margin-bottom: 160px;
+  }
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 165px;
+  }
   &__title {
     margin-bottom: 30px;
+    @media screen and (min-width: $tablet-size) {
+      margin-bottom: 45px;
+    }
   }
   &__list {
     display: flex;
@@ -18,6 +28,15 @@
       &--money {
         order: 2;
       }
+      &--rocket {
+        order: 3;
+      }
+      &--heart {
+        order: 4;
+      }
+      &--gift {
+        order: 5;
+      }
     }
   }
 }
@@ -33,6 +52,12 @@
     }
     @media screen and (min-width: $tablet-size){
       flex-basis: 50%;
+      &:not(:nth-child(3n)) {
+        margin-bottom: 55px;
+      }
+      &:nth-child(3n) {
+        margin-bottom: 0;
+      }
     }
   }
   &__image {
@@ -55,6 +80,12 @@
     }
     &--gift {
       @include size(33px,32px);
+    }
+  }
+  &__advantage {
+    @media screen and (min-width: $tablet-size) {
+      font-size: 20px;
+      line-height: 22px;
     }
   }
 }

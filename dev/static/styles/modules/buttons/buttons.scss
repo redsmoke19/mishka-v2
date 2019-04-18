@@ -15,3 +15,20 @@
   white-space: normal;
   cursor: pointer;
 }
+
+.button-reviews {
+  border: none;
+  background-color: transparent;
+  flex-basis: 50%;
+  padding: 13px 0;
+  &:not(:last-child) {
+    margin-right: 37px;
+  }
+}
+
+.button-arrow {
+  @include size(50px,26px);
+  &--right {
+    transform: rotate(180deg);
+  }
+}
