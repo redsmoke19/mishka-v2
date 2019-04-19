@@ -4,4 +4,9 @@
     max-height: 89px;
     overflow: visible;
   }
+  .container {
+    @media screen and (max-width: 767px) {
+      padding: 0;
+    }
+  }
 }

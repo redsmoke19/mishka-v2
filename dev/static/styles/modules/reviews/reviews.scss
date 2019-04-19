@@ -1,7 +1,7 @@
 .reviews {
   margin-bottom: 90px;
   @media screen and (min-width: $tablet-size) {
-    margin-bottom: 200px;
+    margin-bottom: 0;
   }
   @media screen and (min-width: $desktop-size) {
     width: 1150px;

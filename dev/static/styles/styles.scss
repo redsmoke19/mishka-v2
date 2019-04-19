@@ -48,29 +48,15 @@ button { outline: none; }
 
 *, *:before, *:after { box-sizing: border-box; }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.content { flex: 1 0 auto; }
-
 .container {
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 30px;
   position: relative;
-  @media screen and (max-width: 767px) {
-    padding: 0;
+  @media screen and (min-width: $tablet-size) {
+    padding: 0 50px;
   }
   @media screen and (min-width: $desktop-size){
     width: 1150px;
-  }
-}
-
-.container__mobile {
-  @media screen and (max-width: 767px) {
-    padding: 0 30px;
   }
 }
 

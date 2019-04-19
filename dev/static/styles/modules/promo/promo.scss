@@ -6,6 +6,11 @@
   @media screen and (min-width: $desktop-size) {
     margin-bottom: 130px;
   }
+  .container {
+    @media screen and (max-width: 767px) {
+      padding: 0;
+    }
+  }
   &::after {
     @media screen and (min-width: $tablet-size) {
       content: "";
