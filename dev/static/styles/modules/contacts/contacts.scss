@@ -1,20 +1,66 @@
 .contacts {
+  @include clearfix;
+  margin-bottom: 40px;
+  &__wrapper {
+    @media screen and (min-width: $desktop-size) {
+      width: 1150px;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
   &__title {
     font-family: $main-font;
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 35px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 43px;
+      line-height: 50px;
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      font-size: 53px;
+      line-height: 57px;
+      padding-top: 53px;
+      padding-left: 175px;
+    }
+  }
+  &__icon {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      position: absolute;
+      right: 50px;
+      top: -25px;
+      @include size(47px, 81px);
+    }
+    @media screen and (min-width: $desktop-size) {
+      top: 40px;
+      left: 114px;
+    }
   }
   &__list {
+    color: $base-text-color;
+    line-height: 30px;
     display: flex;
     flex-basis: auto;
     flex-direction: column;
-    color: $base-text-color;
-    line-height: 30px;
+    margin-bottom: 35px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 17px;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex-direction: column;
+      margin-bottom: 80px;
+      padding-left: 175px;
+    }
   }
   &__item {
     display: flex;
-    margin-bottom: 35px;
+    &:not(:last-child) { margin-bottom: 35px; }
   }
   &__parameter {
     display: block;
@@ -22,15 +68,53 @@
   }
   &__value {
     display: block;
+    position: relative;
     word-wrap: break-word;
     min-width: 182px;
     &--email {
       color: $base-text-color;
       border-bottom: 1px solid $bg-color-lightGreen;
+      @media screen and (min-width: $tablet-size) {
+        border: none;
+        max-width: 250px;
+        &::after {
+          content: "";
+          background-color: $bg-color-lightGreen;
+          position: absolute;
+          top: 30px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+        }
+      }
+    }
+  }
+  &__find-us {
+    margin-bottom: 40px;
+    @media screen and (min-width: $tablet-size) {
+      margin-bottom: 55px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin-bottom: 0;
     }
   }
   &__map {
     width: 100%;
-    height: auto;
+    min-height: 457px;
+    @media screen and (min-width: $desktop-size) {
+      position: absolute;
+      top: 0;
+      right: 50px;
+      width: 525px;
+    }
+  }
+  &__button {
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 auto;
+      max-width: 230px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 0 175px;
+    }
   }
 }
