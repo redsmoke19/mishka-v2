@@ -1,12 +1,14 @@
 section.contacts
-    h2.contacts__title Контакты
-    table.contacts__list
-        tr
-            td.contacts__parameter email
-            td.contacts__value info@mimimishkashop.ru
-        tr
-            td.contacts__parameter адрес
-            td.contacts__value г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+    .container
+        h2.contacts__title Контакты
+        ul.contacts__list
+            li.contacts__item
+                span.contacts__parameter email:
+                a(href="mailto:info@mimimishkashop.ru").contacts__value.contacts__value--email info@mimimishkashop.ru
+            li.contacts__item
+                span.contacts__parameter адрес:
+                p.contacts__value г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101
     p.contacts__find-us
-        img(src="http://placehold.it/322x457" width=322 height=457 alt="Как до нас добраться").contacta__map
-    button(type="button").contacts__button.button Напишите нам
+        img(src="http://placehold.it/322x457" width=322 height=457 alt="Как до нас добраться").contacts__map
+    .container
+        button(type="button").contacts__button.button Напишите нам

@@ -1,0 +1,36 @@
+.contacts {
+  &__title {
+    font-family: $main-font;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 35px;
+  }
+  &__list {
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    color: $base-text-color;
+    line-height: 30px;
+  }
+  &__item {
+    display: flex;
+    margin-bottom: 35px;
+  }
+  &__parameter {
+    display: block;
+    min-width: 74px;
+  }
+  &__value {
+    display: block;
+    word-wrap: break-word;
+    min-width: 182px;
+    &--email {
+      color: $base-text-color;
+      border-bottom: 1px solid $bg-color-lightGreen;
+    }
+  }
+  &__map {
+    width: 100%;
+    height: auto;
+  }
+}

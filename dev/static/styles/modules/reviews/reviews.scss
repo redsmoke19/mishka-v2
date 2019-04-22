@@ -1,11 +1,11 @@
 .reviews {
   margin-bottom: 90px;
   @media screen and (min-width: $tablet-size) {
-    margin-bottom: 0;
+    margin-bottom: 130px;
   }
   @media screen and (min-width: $desktop-size) {
     width: 1150px;
-    margin: 0 auto;
+    margin: 0 auto 160px;
   }
   &__image {
     @media screen and (min-width: $tablet-size) {
@@ -48,12 +48,12 @@
     height: 6px;
     background: url("/static/images/general/zigzag-line-mobile.png") repeat-x center;
     @media screen and (min-width: $tablet-size) {
-      bottom: -137px;
+      bottom: -76px;
       height: 17px;
       background: url("/static/images/general/zigzag-line-tablet.png") repeat-x center;
     }
     @media screen and (min-width: $desktop-size) {
-      bottom: -193px;
+      bottom: -90px;
       left: calc(50% - 575px);
       background: url("/static/images/general/zigzag-line-desktop.png") no-repeat center;
       height: 23px;
