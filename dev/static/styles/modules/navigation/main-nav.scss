@@ -21,6 +21,7 @@
     }
   }
   &__logo {
+    background: url('/static/images/general/mobile-logo.svg') no-repeat center;
     position: relative;
     display: flex;
     align-items: center;
@@ -28,8 +29,14 @@
     height: 80px;
     box-shadow: inset 0 -1px 0 0 #e5e5e5;
     @media screen and (min-width: $tablet-size) {
+      background: url('/static/images/general/tablet-logo.svg') no-repeat center;
+      width: 112px;
       height: 88px;
       box-shadow: none;
+    }
+    @media screen and (min-width: $desktop-size) {
+      background: url('/static/images/general/desktop-logo.svg') no-repeat center;
+      width: 150px;
     }
     &--mobile {
       display: block;

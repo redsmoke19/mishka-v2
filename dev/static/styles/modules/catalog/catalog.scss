@@ -1,0 +1,16 @@
+.catalog {
+  &__title {
+    display: block;
+    background-color: $bg-color-gray;
+    font-size: 27px;
+    text-align: center;
+    padding: 70px 20px;
+  }
+}
+
+.products {
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+}

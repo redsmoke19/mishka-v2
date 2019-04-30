@@ -1,0 +1,8 @@
+extends template/main
+
+block variables
+	- var title = 'Каталог товаров'
+	- var pageClass = 'catalog-page'
+
+block content
+	include modules/catalog/catalog-items
