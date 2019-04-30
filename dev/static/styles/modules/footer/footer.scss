@@ -1,1 +1,77 @@
-footer { flex: 0 0 auto; }
+.footer {
+  background-color: $bg-footer;
+  padding: 30px 0;
+  @media screen and (min-width: $tablet-size) {
+    padding: 50px 0;
+  }
+  &__social {
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__logo {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      @include size(102px, 34px);
+    }
+  }
+}
+
+.social {
+  &__list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+    padding-bottom: 27px;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+      padding: 0;
+    }
+    &::after {
+      content: "";
+      background-color: $border-color;
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      @media screen and (min-width: $tablet-size) {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+  &__link {
+    display: flex;
+  }
+  &__icon {
+    @include size(23px, 20px);
+    &--facebook {
+      @include size(15px, 28px);
+    }
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    font-family: $main-font;
+    font-size: 19px;
+    line-height: 18px;
+    margin-right: 30px;
+  }
+  &__logo {
+    @include size(27px, 34px);
+    fill: $bg-color-lightGreen;
+  }
+}

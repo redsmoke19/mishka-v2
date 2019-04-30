@@ -1,13 +1,23 @@
 footer.footer
     .container
         .footer__social.social
+            a.footer__image
+                +icon('logo-footer','footer__logo')
             ul.social__list
                 li.social__item
-                    a(href="https://www.instargam.com/htmlacademy" target="_blank").social__link.social__link--instagram Мы в инстаграм
+                    a(href="https://www.instargam.com/htmlacademy" target="_blank").social__link
+                        span.visually-hidden Мы в инстаграм
+                        +icon('icon-insta','social__icon social__icon--instagram')
                 li.social__item
-                    a(href="https://www.facebook.com/htmlacademy" target="_blank").social__link.social__link--facebook Мы в фэйсбуке
+                    a(href="https://www.facebook.com/htmlacademy" target="_blank").social__link.social__link--facebook
+                        span.visually-hidden Мы в фэйсбуке
+                        +icon('icon-fb','social__icon social__icon--facebook')
                 li.social__item
-                    a(href="https://vk.com/htmlacademy" target="_blank").social__link.social__link--twitter Мы в твиттере
+                    a(href="https://vk.com/htmlacademy" target="_blank").social__link.social__link--twitter
+                        span.visually-hidden Мы в твиттере
+                        +icon('icon-twitter','social__icon social__icon--twitter')
             .footer__copyright.copyright
                 b.copyright__text Разработано:
-                a(href="https://htmlacademy.ru").copyright__link HTML Academy
+                a(href="https://htmlacademy.ru").copyright__link
+                    span.visually-hidden HTML Academy
+                    +icon('logo-htmlacademy','copyright__logo')

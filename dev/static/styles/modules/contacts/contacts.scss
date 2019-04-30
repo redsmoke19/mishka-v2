@@ -1,6 +1,12 @@
 .contacts {
   @include clearfix;
   margin-bottom: 40px;
+  @media screen and (min-width: $tablet-size) {
+    margin-bottom: 57px;
+  }
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 105px;
+  }
   &__wrapper {
     @media screen and (min-width: $desktop-size) {
       width: 1150px;
