@@ -1,6 +1,7 @@
 nav.main-nav
     .main-nav__top
         a.main-nav__logo(href = pageClass === 'index-page' ? false : 'index.html')
+            span.visually-hidden Логотип магазина Мишка
         .header__sandwich.sandwich.sandwich--active
             .sandwich__line.sandwich__line--top
             .sandwich__line.sandwich__line--middle
@@ -8,7 +9,7 @@ nav.main-nav
     .main-nav__bottom
         ul.main-nav__list.site-list
             li.main-nav__item.site-list__item
-                a(href="/catalog.html").site-list__link Каталог товаров
+                a.site-list__link(href = pageClass === 'catalog-page' ? false : 'catalog.html') Каталог товаров
             li.main-nav__item.site-list__item
                 a(href="#").site-list__link Вязание на заказ
         ul.main-nav__list.user-list

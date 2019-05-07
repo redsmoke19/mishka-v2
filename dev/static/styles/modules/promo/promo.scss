@@ -24,8 +24,9 @@
   &__title {
     background: $bg-color-gray url("/static/images/general/hero-mobile.jpg") no-repeat center -20px;
     font-size: 27px;
+    font-family: $main-font;
     line-height: 30px;
-    padding: 70px 50px 120px 50px;
+    padding: 70px 30px 120px 30px;
     text-align: center;
     @media screen and (min-width: $tablet-size) {
       background: url("/static/images/general/hero-tablet.jpg") no-repeat center 20px;

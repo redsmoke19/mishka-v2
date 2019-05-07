@@ -11,3 +11,13 @@
     line-height: 57px;
   }
 }
+
+.page-title {
+  background-color: $bg-color-gray;
+  display: block;
+  font-family: $main-font;
+  font-size: 27px;
+  margin-bottom: 30px;
+  padding: 70px 20px;
+  text-align: center;
+}

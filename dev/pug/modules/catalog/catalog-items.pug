@@ -1,7 +1,31 @@
-section.catalog
-	h1.title.catalog__title Каталог товаров
-	.container
-		.catalog__wrapper
-			ul.catalog__list.products__list
-				li.products__item
-					img(src="/static/images/general/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик").products__image
+section.s-catalog
+    .container
+        .catalog
+            ul.catalog__list
+                li.catalog__item
+                    img.catalog__image(src="/static/images/general/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик")
+                    .catalog__wrapper
+                        p.catalog__title Зайчик-попрыгайчик
+                        span.catalog__description Рост 30 см, вес 200 г
+                        .catalog__bottom
+                            span.catalog__price 1200 руб.
+                            button.catalog__card
+                                +icon('icon-card','icon__card')
+                li.catalog__item
+                    img.catalog__image(src="/static/images/general/photo-2-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик")
+                    .catalog__wrapper
+                        p.catalog__title Корзинка для белья
+                        span.catalog__description Диаметр 15 см, высота 10см
+                        .catalog__bottom
+                            span.catalog__price 690 руб.
+                            button.catalog__card
+                                +icon('icon-card','icon__card')
+                li.catalog__item
+                    img.catalog__image(src="/static/images/general/photo-3-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик")
+                    .catalog__wrapper
+                        p.catalog__title Большая корзинка для игрушек
+                        span.catalog__description Диаметр 30 см, высота 30 см
+                        .catalog__bottom
+                            span.catalog__price 1500 руб.
+                            button.catalog__card
+                                +icon('icon-card','icon__card')

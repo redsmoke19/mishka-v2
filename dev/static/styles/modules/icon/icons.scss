@@ -1,0 +1,6 @@
+.icon {
+  &__card {
+    @include size(20px, 19px);
+    opacity: 0.2;
+  }
+}
