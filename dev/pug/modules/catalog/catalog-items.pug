@@ -1,31 +1,59 @@
 section.s-catalog
+    h2.visually-hidden Коталог товаров
     .container
         .catalog
             ul.catalog__list
                 li.catalog__item
-                    img.catalog__image(src="/static/images/general/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик")
+                    a(href="#").catalog__image--link
+                        picture
+                            source(media="(min-width: 1150px)" srcset="/static/images/general/photo-1-desktop@1x.jpg 1x, /static/images/general/photo-1-desktop@2x.jpg 2x")
+                            source(media="(min-width: 768px)" srcset="/static/images/general/photo-1-tablet@1x.jpg 1x, /static/images/general/photo-1-tablet@2x.jpg 2x")
+                            img.catalog__image(src="/static/images/general/photo-1-mobile@1x.jpg" srcset="/static/images/general/photo-1-mobile@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик")
                     .catalog__wrapper
-                        p.catalog__title Зайчик-попрыгайчик
+                        a(href="#").catalog__title Зайчик-попрыгайчик
                         span.catalog__description Рост 30 см, вес 200 г
                         .catalog__bottom
                             span.catalog__price 1200 руб.
                             button.catalog__card
+                                span.visually-hidden Добавить в карзину
                                 +icon('icon-card','icon__card')
                 li.catalog__item
-                    img.catalog__image(src="/static/images/general/photo-2-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик")
+                    a(href="#").catalog__image--link
+                        picture
+                            source(media="(min-width: 1150px)" srcset="/static/images/general/photo-2-desktop@1x.jpg 1x, /static/images/general/photo-2-desktop@2x.jpg 2x")
+                            source(media="(min-width: 768px)" srcset="/static/images/general/photo-2-tablet@1x.jpg 1x, /static/images/general/photo-2-tablet@2x.jpg 2x")
+                            img.catalog__image(src="/static/images/general/photo-2-mobile@1x.jpg" srcset="/static/images/general/photo-2-mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья")
                     .catalog__wrapper
-                        p.catalog__title Корзинка для белья
+                        a(href="#").catalog__title Корзинка для белья
                         span.catalog__description Диаметр 15 см, высота 10см
                         .catalog__bottom
                             span.catalog__price 690 руб.
                             button.catalog__card
+                                span.visually-hidden Добавить в карзину
                                 +icon('icon-card','icon__card')
                 li.catalog__item
-                    img.catalog__image(src="/static/images/general/photo-3-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик")
+                    a(href="#").catalog__image--link
+                        picture
+                            source(media="(min-width: 1150px)" srcset="/static/images/general/photo-3-desktop@1x.jpg 1x, /static/images/general/photo-3-desktop@2x.jpg 2x")
+                            source(media="(min-width: 768px)" srcset="/static/images/general/photo-3-tablet@1x.jpg 1x, /static/images/general/photo-3-tablet@2x.jpg 2x")
+                            img.catalog__image(src="/static/images/general/photo-3-mobile@1x.jpg" srcset="/static/images/general/photo-3-mobile@2x.jpg 2x" width="260" height="195" alt="Большая корзина для белья")
                     .catalog__wrapper
-                        p.catalog__title Большая корзинка для игрушек
+                        a(href="#").catalog__title Большая корзинка для игрушек
                         span.catalog__description Диаметр 30 см, высота 30 см
                         .catalog__bottom
                             span.catalog__price 1500 руб.
                             button.catalog__card
+                                span.visually-hidden Добавить в карзину
                                 +icon('icon-card','icon__card')
+        .catalog-production
+            p.catalog__title.catalog-production__title Процесс производства
+                +icon('icon-video','icon__video catalog-production__icon catalog-production__icon--video')
+            a(href="#").catalog-production__video
+                picture
+                    source(media="(min-width: 1150px)" srcset="/static/images/general/video-desktop@1x.jpg 1x, /static/images/general/video-desktop@2x.jpg 2x")
+                    source(media="(min-width: 768px)" srcset="/static/images/general/video-tablet@1x.jpg 1x, /static/images/general/video-tablet@2x.jpg 2x")
+                    img.catalog-production__image(src="/static/images/general/video-mobile@1x.jpg" srcset="/static/images/general/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видео производства")
+                +icon('icon-play','icon__play catalog-production__icon catalog-production__icon--play')
+            .catalog-production__wrapper
+                p.catalog-production__description По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+                button(type="button").button.catalog-production__button Сделать заказ

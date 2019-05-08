@@ -18,6 +18,8 @@
     padding: 25px 28px;
   }
   &__title {
+    color: $black;
+    display: block;
     font-family: $main-font;
     font-size: 17px;
     line-height: 24px;
@@ -34,7 +36,7 @@
     line-height: 30px;
   }
   &__image {
-    height: 100%;
+    height: auto;
     width: 100%;
   }
   &__bottom {
@@ -51,5 +53,43 @@
     background-color: transparent;
     cursor: pointer;
     padding: 0;
+  }
+}
+
+.catalog-production {
+  border: 1px solid $border-color;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  &__title {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 90px;
+    padding-right: 34px;
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+  &__icon {
+    &--video {
+      fill: $bg-color-lightGreen;
+      left: 34px;
+      position: absolute;
+      top: calc(50% - 16px);
+    }
+    &--play {
+      left: calc(50% - 50px);
+      position: absolute;
+      top: calc(50% - 38px);
+    }
+  }
+  &__wrapper {
+    padding: 0 34px;
+  }
+  &__video {
+    display: block;
+    margin-bottom: 30px;
+    position: relative;
   }
 }

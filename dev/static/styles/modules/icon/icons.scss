@@ -3,4 +3,10 @@
     @include size(20px, 19px);
     opacity: 0.2;
   }
+  &__video {
+    @include size(32px, 32px);
+  }
+  &__play {
+    @include size(100px, 76px);
+  }
 }
