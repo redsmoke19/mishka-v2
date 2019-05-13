@@ -15,32 +15,45 @@
   @media screen and (min-width: $tablet-size) {
     margin-bottom: 53px;
   }
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 0;
+  }
   &__list {
     display: flex;
     flex-direction: column;
     @media screen and (min-width: $desktop-size) {
       flex-direction: row;
+      flex-wrap: wrap;
     }
   }
   &__item {
     display: flex;
     flex-direction: column;
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+    &:not(:last-child) { margin-bottom: 30px; }
     @media screen and (min-width: $tablet-size) {
       flex-direction: row;
-      &:not(:last-child) {
-        margin-bottom: 53px;
-      }
+      &:not(:last-child) { margin-bottom: 53px; }
     }
     @media screen and (min-width: $desktop-size) {
       flex-direction: column;
+      width: 316px;
+      margin-right: 51px;
+      margin-bottom: 57px;
+      &:not(:last-child) { margin-bottom: 57px; }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
   }
   &__wrapper {
     border: 1px solid $border-color;
     padding: 0 28px;
+    &--top {
+      @media screen and (min-width: $desktop-size) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
     &--bottom {
       border-top: 1px solid $border-color;
       display: flex;
@@ -108,9 +121,17 @@
   flex-direction: column;
   margin-bottom: 58px;
   padding: 30px 0;
+  position: relative;
   @media screen and (min-width: $tablet-size) {
     padding-bottom: 45px;
     padding-top: 0;
+  }
+  @media screen and (min-width: $desktop-size) {
+    width: 368px;
+    height: 455px;
+    margin-bottom: 105px;
+    margin-left: auto;
+    padding: 100px 0 60px 0;
   }
   &__title {
     position: relative;
@@ -123,6 +144,9 @@
       order: 2;
       padding-left: 107px;
       padding-right: 40px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 0 57px 0 80px;
     }
   }
   &__image {
@@ -138,6 +162,10 @@
       @media screen and (min-width: $tablet-size) {
         left: 40px;
       }
+      @media screen and (min-width: $desktop-size) {
+        left: 80px;
+        top: -50px;
+      }
     }
     &--play {
       left: calc(50% - 50px);
@@ -151,13 +179,23 @@
       order: 3;
       padding: 0 40px;
     }
+    @media screen and (min-width: $desktop-size) {
+      padding: 0 57px 0 80px;
+    }
   }
   &__video {
-    display: block;
     margin-bottom: 30px;
     position: relative;
     @media screen and (min-width: $tablet-size) {
       margin-bottom: 40px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: auto;
+      left: -683px;
+      margin: 0;
+      position: absolute;
+      top: -1px;
+      width: 682px;
     }
   }
   &__description {
