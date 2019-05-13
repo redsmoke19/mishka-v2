@@ -9,4 +9,7 @@
   &__play {
     @include size(100px, 76px);
   }
+  &__zigzag {
+    @include size(100%, 23px);
+  }
 }

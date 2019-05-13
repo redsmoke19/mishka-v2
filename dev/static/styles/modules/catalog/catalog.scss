@@ -1,4 +1,5 @@
 .s-catalog {
+  position: relative;
   &__title {
     background-color: $bg-color-gray;
     display: block;
@@ -10,12 +11,49 @@
 }
 
 .catalog {
+  margin-bottom: 30px;
+  @media screen and (min-width: $tablet-size) {
+    margin-bottom: 53px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $desktop-size) {
+      flex-direction: row;
+    }
+  }
   &__item {
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $tablet-size) {
+      flex-direction: row;
+      &:not(:last-child) {
+        margin-bottom: 53px;
+      }
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex-direction: column;
+    }
   }
   &__wrapper {
     border: 1px solid $border-color;
-    padding: 25px 28px;
+    padding: 0 28px;
+    &--bottom {
+      border-top: 1px solid $border-color;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 0;
+    }
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      flex-basis: 50%;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
   &__title {
     color: $black;
@@ -24,29 +62,37 @@
     font-size: 17px;
     line-height: 24px;
     margin-bottom: 15px;
+    padding-top: 25px;
     text-align: left;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 20px;
+    }
   }
   &__description {
-    border-bottom: 1px solid $border-color;
     display: block;
     color: $base-text-color;
     font-size: 13px;
     margin-bottom: 25px;
-    padding-bottom: 25px;
     line-height: 30px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 15px;
+    }
   }
-  &__image {
-    height: auto;
-    width: 100%;
-  }
-  &__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &__link {
+    &--image {
+      height: auto;
+      width: 100%;
+    }
+    @media screen and (min-width: $tablet-size) {
+      flex-basis: 50%;
+    }
   }
   &__price {
     display: block;
     font-family: $main-font;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 17px;
+    }
   }
   &__card {
     border: none;
@@ -60,12 +106,24 @@
   border: 1px solid $border-color;
   display: flex;
   flex-direction: column;
+  margin-bottom: 58px;
   padding: 30px 0;
+  @media screen and (min-width: $tablet-size) {
+    padding-bottom: 45px;
+    padding-top: 0;
+  }
   &__title {
     position: relative;
     margin-bottom: 20px;
     padding-left: 90px;
     padding-right: 34px;
+    padding-top: 0;
+    @media screen and (min-width: $tablet-size) {
+      margin-bottom: 40px;
+      order: 2;
+      padding-left: 107px;
+      padding-right: 40px;
+    }
   }
   &__image {
     width: 100%;
@@ -77,6 +135,9 @@
       left: 34px;
       position: absolute;
       top: calc(50% - 16px);
+      @media screen and (min-width: $tablet-size) {
+        left: 40px;
+      }
     }
     &--play {
       left: calc(50% - 50px);
@@ -86,10 +147,27 @@
   }
   &__wrapper {
     padding: 0 34px;
+    @media screen and (min-width: $tablet-size) {
+      order: 3;
+      padding: 0 40px;
+    }
   }
   &__video {
     display: block;
     margin-bottom: 30px;
     position: relative;
+    @media screen and (min-width: $tablet-size) {
+      margin-bottom: 40px;
+    }
+  }
+  &__description {
+    color: $base-text-color;
+    font-size: 13px;
+    margin-bottom: 25px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 15px;
+      line-height: 30px;
+      margin-bottom: 40px;
+    }
   }
 }
