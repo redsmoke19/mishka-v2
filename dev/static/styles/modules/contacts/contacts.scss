@@ -80,6 +80,8 @@
     &--email {
       color: $base-text-color;
       border-bottom: 1px solid $bg-color-lightGreen;
+      &:hover { color: #46c1ae; }
+      &:active { opacity: 0.3;}
       @media screen and (min-width: $tablet-size) {
         border: none;
         max-width: 250px;

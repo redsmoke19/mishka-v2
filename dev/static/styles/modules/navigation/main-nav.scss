@@ -28,6 +28,8 @@
     justify-content: center;
     height: 80px;
     box-shadow: inset 0 -1px 0 0 #e5e5e5;
+    &[href]:hover { opacity: 0.6; }
+    &[href]:active { opacity: 0.3; }
     @media screen and (min-width: $tablet-size) {
       background: url('/static/images/general/tablet-logo.svg') no-repeat center;
       width: 112px;
@@ -110,6 +112,8 @@
   }
   &__link {
     color: $black;
+    &[href]:hover { opacity: 0.6; }
+    &[href]:active { opacity: 0.3; }
     @media screen and (min-width: $tablet-size) { font-size: 15px; }
     @media screen and (min-width: $desktop-size) { font-size: 17px; }
   }
@@ -133,6 +137,16 @@
   &__link {
     display: block;
     color: $black;
+    &:hover {
+      opacity: 0.6;
+      svg {
+        opacity: 1;
+        fill: $bg-color-lightGreen;
+      }
+    }
+    &:active {
+      opacity: 0.3;
+    }
     &--card {
       @media screen and (min-width: $tablet-size) { padding-left: 50px; }
     }
@@ -169,5 +183,7 @@
   &__link {
     color: $black;
     font-family: $main-font;
+    &:hover { opacity: 0.6; }
+    &:active { opacity: 0.3; }
   }
 }

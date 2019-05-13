@@ -15,7 +15,7 @@
     @media screen and (min-width: $tablet-size) {
       content: "";
       position: absolute;
-      bottom: -18px;
+      bottom: -15px;
       width: 100%;
       height: 34px;
       background: url("/static/images/general/bg-zigzag-fill.svg") repeat-x center;
@@ -66,21 +66,45 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    transition: all linear 0.2s;
+    &:hover {
+      transform: translateY(-5px);
+      .site-promo__image {
+        opacity: 0.7;
+      }
+    }
+    &:active {
+      .site-promo__image {
+        opacity: 0.3;
+      }
+      .site-promo__link {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
     &--lamp {
       background-color: $bg-color-lightGreen;
+      &:hover {
+        background-color: #59d5bc;
+      }
     }
     &--toys {
       background-color: $bg-color-darkGreen;
+      &:hover {
+        background-color: #46c1ae;
+      }
     }
   }
   &__image {
     @include size(60px);
+    fill: #149080;
     margin-right: 30px;
-    opacity: 0.1;
+    opacity: 0.5;
+    transition: all linear 0.2s;
   }
   &__link {
-    display: block;
     color: $white;
+    display: block;
     font-family: $main-font;
+    transition: all linear 0.2s;
   }
 }
