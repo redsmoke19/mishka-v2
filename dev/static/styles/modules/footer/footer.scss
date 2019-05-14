@@ -16,6 +16,8 @@
     @media screen and (min-width: $tablet-size) {
       display: block;
       @include size(102px, 34px);
+      &:hover { fill: $color-hover; }
+      &:active { opacity: 0.3; }
     }
   }
 }
@@ -51,6 +53,12 @@
   }
   &__link {
     display: flex;
+    &:hover, &:focus {
+      .social__icon { fill: $color-hover; }
+    }
+    &:active {
+      .social__icon { opacity: 0.3; }
+    }
   }
   &__icon {
     @include size(23px, 20px);
@@ -69,6 +77,14 @@
     font-size: 19px;
     line-height: 18px;
     margin-right: 30px;
+  }
+  &__link {
+    &:hover {
+      .copyright__logo { fill: $color-hover; }
+    }
+    &:active {
+      .copyright__logo { opacity: 0.3; }
+    }
   }
   &__logo {
     @include size(27px, 34px);

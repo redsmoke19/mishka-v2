@@ -2,6 +2,11 @@
   &__card {
     @include size(20px, 19px);
     opacity: 0.2;
+    &:hover {
+      fill: $color-hover;
+      opacity: 1;
+    }
+    &:active { opacity: 0.3; }
   }
   &__video {
     @include size(32px, 32px);
