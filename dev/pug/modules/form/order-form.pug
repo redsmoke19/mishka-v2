@@ -1,0 +1,62 @@
+section.s-form
+	h2.visually-hidden Форма для заказа
+	.form
+		.container
+			p.form__intro Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+		form.order-form(action="https://echo.htmlacademy.ru" method="post")
+			fieldset.order-form__group
+				legend Тип
+				.order-form__wrapper
+					.order-form__selection
+						input.order-form__type(type="radio" name="type" id="type-interior" value="interior-true" checked)
+						label.order-form__label(for="type-interior") Аксессуар для интерьера
+					.order-form__selection
+						input.order-form__type(type="radio" name="type" id="type-toys" value="interior-true")
+						label.order-form__label(for="type-toys") Детская игрушка
+			fieldset.order-form__group.order-form__group--darkbg
+				legend Цвет
+				.order-form__wrapper
+					.order-form__selection
+						input.order-form__color(type="checkbox" name="white" id="color-white" value="interior-true" checked)
+						label.order-form__label(for="color-white") Белый
+					.order-form__selection
+						input.order-form__color(type="checkbox" name="gray" id="color-gray" value="interior-true" checked)
+						label.order-form__label(for="color-gray") Серый
+					.order-form__selection
+						input.order-form__color(type="checkbox" name="tiffani" id="color-tiffani" value="interior-true")
+						label.order-form__label(for="color-tiffani") "Тиффани"
+					.order-form__selection
+						input.order-form__color(type="checkbox" name="black" id="color-black" value="interior-true")
+						label.order-form__label(for="color-black") Черный
+					.order-form__selection
+						input.order-form__color(type="checkbox" name="pink" id="color-pink" value="interior-true")
+						label.order-form__label(for="color-pink") Розовый
+					.order-form__selection
+						input.order-form__color(type="checkbox" name="orange" id="color-orange" value="interior-true")
+						label.order-form__label(for="color-orange") Оранжевый
+			fieldset.order-form__group
+				legend ФИО
+				.order-form__wrapper
+					.order-form__text
+						label.order-form__label Имя:
+						input(type="text" name="name" placeholder="Введите ваше имя*" required)
+					.order-form__text
+						label.order-form__label Фамилия:
+						input(type="text" name="name" placeholder="Укажите фалилию*" required)
+					.order-form__text
+						label.order-form__label Отчество
+						input(type="text" name="name" placeholder="Отчество, если желаете")
+			fieldset.order-form__group.order-form__group--darkbg
+				legend Тел
+				.order-form__wrapper
+					input.order-form__tel(type="tel" value="" placeholder="+7 XXX XX XX*")
+				legend E-mail
+				.order-form__wrapper
+					input.order-form__email(type="email" value="" placeholder="Ваш E-mail*")
+			fieldset.order-form__group
+				legend Доп
+				.order-form__wrapper
+					textarea(name="text" rows="5" cols="10" placeholder="Опишите все ваши пожелания к заказу")
+			.order-form__bottom
+				input.order-form__button.button(type="submit" value="Отправить заказ")
+				p.order-form__note <sup>*</sup> Поля обязательные для заполнения

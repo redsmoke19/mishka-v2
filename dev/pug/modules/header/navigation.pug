@@ -11,7 +11,7 @@ nav.main-nav
             li.main-nav__item.site-list__item
                 a.site-list__link(href = pageClass === 'catalog-page' ? false : 'catalog.html') Каталог товаров
             li.main-nav__item.site-list__item
-                a(href="#").site-list__link Вязание на заказ
+                a.site-list__link(href = pageClass === 'form-page' ? false : 'form.html') Вязание на заказ
         ul.main-nav__list.user-list
             li.main-nav__item.user-list__item
                 a(href="#").user-list__link

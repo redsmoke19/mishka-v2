@@ -1,0 +1,9 @@
+extends template/main
+
+block variables
+	- var title = 'Форма заказа'
+	- var pageClass = 'form-page'
+
+block content
+	h1.page-title Вязание на заказ
+	include modules/form/order-form
