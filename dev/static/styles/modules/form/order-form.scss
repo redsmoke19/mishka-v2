@@ -1,0 +1,116 @@
+.form-title {
+  margin-bottom: 25px;
+}
+
+.form {
+  &__intro {
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+}
+
+.order-form {
+  &__group {
+    border: none;
+    margin: 0;
+    padding: 0;
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+  }
+  &__title {
+    align-items: center;
+    color: $bg-color-lightGreen;
+    display: flex;
+    font-family: $main-font;
+    font-size: 17px;
+    line-height: 16px;
+    margin-bottom: 35px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    width: 100%;
+    &::after {
+      background-color: $bg-color-lightGreen;
+      content: "";
+      height: 1px;
+      margin-left: 20px;
+      position: relative;
+      width: 100%;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__selection {
+    align-items: center;
+    display: flex;
+    font-family: $main-font;
+    font-size: 17px;
+    line-height: 18px;
+    padding-left: 90px;
+    padding-right: 30px;
+    position: relative;
+    &:not(:last-child) { margin-bottom: 25px; }
+    &--checkbox {
+      &:not(:last-child) { margin-bottom: 40px; }
+    }
+  }
+  &__type {
+    + label {
+      &::before {
+        border: 2px solid $base-text-color;
+        border-radius: 50%;
+        content: "";
+        height: 39px;
+        left: 30px;
+        position: absolute;
+        top: calc(50% - 19px);
+        width: 39px;
+      }
+    }
+    &:checked {
+      + label {
+        &::after {
+          background-color: $bg-color-lightGreen;
+          border-radius: 50%;
+          content: "";
+          height: 15px;
+          left: 42px;
+          position: absolute;
+          width: 15px;
+        }
+      }
+    }
+  }
+  &__color {
+    + label {
+      &::before {
+        border: 2px solid $base-text-color;
+        content: "";
+        height: 39px;
+        left: 30px;
+        position: absolute;
+        top: calc(50% - 19px);
+        width: 39px;
+      }
+    }
+    &:checked {
+      + label {
+        &::after {
+          background: url('/static/images/general/tick.svg') no-repeat center;
+          content: "";
+          height: 20px;
+          left: 37px;
+          position: absolute;
+          width: 26px;
+        }
+      }
+    }
+  }
+  &__label {
+    align-items: center;
+    display: flex;
+  }
+}
