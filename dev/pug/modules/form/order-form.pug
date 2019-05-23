@@ -5,7 +5,7 @@ section.s-form
 			p.form__intro Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
 		form.order-form(action="https://echo.htmlacademy.ru" method="post")
 			.order-form__inner
-				fieldset.order-form__group
+				fieldset.order-form__group--top
 					legend.order-form__title Тип
 					ul.order-form__wrapper
 						li.order-form__selection
@@ -14,7 +14,7 @@ section.s-form
 						li.order-form__selection
 							input.visually-hidden.order-form__type(type="radio" name="type" id="type-toys" value="interior-true")
 							label.order-form__label.order-form__label--radio(for="type-toys") Детская игрушка
-				fieldset.order-form__group.order-form__group--darkbg
+				fieldset.order-form__group--darkbg.order-form__group--top
 					legend.order-form__title Цвет
 					ul.order-form__wrapper
 						li.order-form__selection.order-form__selection--checkbox
@@ -40,20 +40,24 @@ section.s-form
 					.order-form__wrapper
 						.order-form__text
 							label.order-form__label Имя:
-							input(type="text" name="name" placeholder="Введите ваше имя*" required)
+							input.order-form__input(type="text" name="name" placeholder="Введите ваше имя*" required)
 						.order-form__text
 							label.order-form__label Фамилия:
-							input(type="text" name="name" placeholder="Укажите фалилию*" required)
+							input.order-form__input(type="text" name="name" placeholder="Укажите фалилию*" required)
 						.order-form__text
 							label.order-form__label Отчество
-							input(type="text" name="name" placeholder="Отчество, если желаете")
+							input.order-form__input(type="text" name="name" placeholder="Отчество, если желаете")
 				fieldset.order-form__group.order-form__group--darkbg
-					legend Тел
+					.order-form__wrapper.order-form__wrapper--contacts
+						legend.order-form__title.order-form__title--contacts Тел
+						.order-form__wrapper--inner
+							input.order-form__input(type="tel" value="" placeholder="+7 XXX XX XX*")
+							+icon('telephone','icon__telephone order-form__icon order-form__icon--telephone','25px','25px')
 					.order-form__wrapper
-						input.order-form__tel(type="tel" value="" placeholder="+7 XXX XX XX*")
-					legend E-mail
-					.order-form__wrapper
-						input.order-form__email(type="email" value="" placeholder="Ваш E-mail*")
+						legend.order-form__title.order-form__title--contacts E-mail
+						.order-form__wrapper--inner
+							input.order-form__input(type="email" value="" placeholder="Ваш E-mail*")
+							+icon('envelope','icon__mail order-form__icon order-form__icon--email','43px','33px')
 				fieldset.order-form__group
 					legend Доп
 					.order-form__wrapper

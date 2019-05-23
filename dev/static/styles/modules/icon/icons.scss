@@ -17,4 +17,10 @@
   &__zigzag {
     @include size(100%, 23px);
   }
+  &__telephone {
+    @include size(25px, 25px);
+  }
+  &__email {
+    @include size(42px, 33px);
+  }
 }
