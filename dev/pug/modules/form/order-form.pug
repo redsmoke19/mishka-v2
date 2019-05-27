@@ -5,36 +5,38 @@ section.s-form
 			p.form__intro Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
 		form.order-form(action="https://echo.htmlacademy.ru" method="post")
 			.order-form__inner
-				fieldset.order-form__group--top
-					legend.order-form__title Тип
-					ul.order-form__wrapper
-						li.order-form__selection
-							input.visually-hidden.order-form__type(type="radio" name="type" id="type-interior" value="interior-true" checked)
-							label.order-form__label.order-form__label--radio(for="type-interior") Аксессуар для интерьера
-						li.order-form__selection
-							input.visually-hidden.order-form__type(type="radio" name="type" id="type-toys" value="interior-true")
-							label.order-form__label.order-form__label--radio(for="type-toys") Детская игрушка
-				fieldset.order-form__group--darkbg.order-form__group--top
-					legend.order-form__title Цвет
-					ul.order-form__wrapper
-						li.order-form__selection.order-form__selection--checkbox
-							input.visually-hidden.order-form__color(type="checkbox" name="white" id="color-white" value="interior-true" checked)
-							label.order-form__label(for="color-white") Белый
-						li.order-form__selection.order-form__selection--checkbox
-							input.visually-hidden.order-form__color(type="checkbox" name="gray" id="color-gray" value="interior-true" checked)
-							label.order-form__label(for="color-gray") Серый
-						li.order-form__selection.order-form__selection--checkbox
-							input.visually-hidden.order-form__color(type="checkbox" name="tiffani" id="color-tiffani" value="interior-true")
-							label.order-form__label(for="color-tiffani") "Тиффани"
-						li.order-form__selection.order-form__selection--checkbox
-							input.visually-hidden.order-form__color(type="checkbox" name="black" id="color-black" value="interior-true")
-							label.order-form__label(for="color-black") Черный
-						li.order-form__selection.order-form__selection--checkbox
-							input.visually-hidden.order-form__color(type="checkbox" name="pink" id="color-pink" value="interior-true")
-							label.order-form__label(for="color-pink") Розовый
-						li.order-form__selection.order-form__selection--checkbox
-							input.visually-hidden.order-form__color(type="checkbox" name="orange" id="color-orange" value="interior-true")
-							label.order-form__label(for="color-orange") Оранжевый
+				fieldset.order-form__group.order-form__group--top
+					.order-form__container
+						legend.order-form__title Тип
+						ul.order-form__wrapper
+							li.order-form__selection.order-form__selection--radio
+								input.visually-hidden.order-form__type(type="radio" name="type" id="type-interior" value="interior-true" checked)
+								label.order-form__label.order-form__label--radio(for="type-interior") Аксессуар для интерьера
+							li.order-form__selection.order-form__selection--radio
+								input.visually-hidden.order-form__type(type="radio" name="type" id="type-toys" value="interior-true")
+								label.order-form__label.order-form__label--radio(for="type-toys") Детская игрушка
+				fieldset.order-form__group--darkbg.order-form__group.order-form__group--top
+					.order-form__container
+						legend.order-form__title Цвет
+						ul.order-form__wrapper.order-form__wrapper--checkbox
+							li.order-form__selection.order-form__selection--checkbox
+								input.visually-hidden.order-form__color(type="checkbox" name="white" id="color-white" value="interior-true" checked)
+								label.order-form__label(for="color-white") Белый
+							li.order-form__selection.order-form__selection--checkbox
+								input.visually-hidden.order-form__color(type="checkbox" name="gray" id="color-gray" value="interior-true" checked)
+								label.order-form__label(for="color-gray") Серый
+							li.order-form__selection.order-form__selection--checkbox
+								input.visually-hidden.order-form__color(type="checkbox" name="tiffani" id="color-tiffani" value="interior-true")
+								label.order-form__label(for="color-tiffani") "Тиффани"
+							li.order-form__selection.order-form__selection--checkbox
+								input.visually-hidden.order-form__color(type="checkbox" name="black" id="color-black" value="interior-true")
+								label.order-form__label(for="color-black") Черный
+							li.order-form__selection.order-form__selection--checkbox
+								input.visually-hidden.order-form__color(type="checkbox" name="pink" id="color-pink" value="interior-true")
+								label.order-form__label(for="color-pink") Розовый
+							li.order-form__selection.order-form__selection--checkbox
+								input.visually-hidden.order-form__color(type="checkbox" name="orange" id="color-orange" value="interior-true")
+								label.order-form__label(for="color-orange") Оранжевый
 				fieldset.order-form__group
 					legend.order-form__title ФИО
 					.order-form__wrapper
