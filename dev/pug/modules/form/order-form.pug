@@ -38,33 +38,35 @@ section.s-form
 								input.visually-hidden.order-form__color(type="checkbox" name="orange" id="color-orange" value="interior-true")
 								label.order-form__label(for="color-orange") Оранжевый
 				fieldset.order-form__group
-					legend.order-form__title ФИО
-					.order-form__wrapper
-						.order-form__text
-							label.order-form__label Имя:
-							input.order-form__input(type="text" name="name" placeholder="Введите ваше имя*" required)
-						.order-form__text
-							label.order-form__label Фамилия:
-							input.order-form__input(type="text" name="name" placeholder="Укажите фалилию*" required)
-						.order-form__text
-							label.order-form__label Отчество
-							input.order-form__input(type="text" name="name" placeholder="Отчество, если желаете")
+					.order-form__container
+						legend.order-form__title ФИО
+						.order-form__wrapper
+							.order-form__text
+								label.order-form__label.order-form__label--fio Имя:
+								input.order-form__input(type="text" name="name" placeholder="Введите ваше имя*" required)
+							.order-form__text
+								label.order-form__label.order-form__label--fio Фамилия:
+								input.order-form__input(type="text" name="name" placeholder="Укажите фалилию*" required)
+							.order-form__text
+								label.order-form__label.order-form__label--fio Отчество
+								input.order-form__input(type="text" name="name" placeholder="Отчество, если желаете")
 				fieldset.order-form__group.order-form__group--darkbg
-					.order-form__wrapper.order-form__wrapper--contacts
+					.order-form__container.order-form__container--contacts
 						legend.order-form__title.order-form__title--contacts Тел
-						.order-form__wrapper--inner
+						.order-form__wrapper.order-form__wrapper--inner
 							input.order-form__input.order-form__input--contacts(type="tel" value="" placeholder="+7 XXX XX XX*")
 							+icon('telephone','icon__telephone order-form__icon order-form__icon--telephone','25px','25px')
-					.order-form__wrapper
+					.order-form__container
 						legend.order-form__title.order-form__title--contacts E-mail
-						.order-form__wrapper--inner
+						.order-form__wrapper.order-form__wrapper--inner
 							input.order-form__input.order-form__input--contacts(type="email" value="" placeholder="Ваш E-mail*")
 							+icon('envelope','icon__mail order-form__icon order-form__icon--email','43px','33px')
 				fieldset.order-form__group
-					legend.order-form__title Доп
-					.order-form__wrapper
-						.order-form__textarea
-							textarea.order-form__wishes(name="text" rows="5" cols="10" placeholder="Опишите все ваши пожелания к заказу")
+					.order-form__container
+						legend.order-form__title Доп
+						.order-form__wrapper
+							.order-form__textarea
+								textarea.order-form__wishes(name="text" rows="5" cols="10" placeholder="Опишите все ваши пожелания к заказу")
 			.order-form__bottom
 				.container
 					p.order-form__note <sup>*</sup> Поля обязательные для заполнения

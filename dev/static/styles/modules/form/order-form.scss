@@ -7,6 +7,9 @@
 
 .form {
   margin-bottom: 55px;
+  @media screen and (min-width: $tablet-size) {
+    margin-bottom: 50px;
+  }
   &__intro {
     font-size: 13px;
     line-height: 24px;
@@ -20,12 +23,20 @@
 }
 
 .order-form {
-  &__inner { margin-bottom: 20px; }
+  &__inner {
+    margin-bottom: 20px;
+    @media screen and (min-width: $tablet-size) {
+      margin-bottom: 50px;
+    }
+  }
   &__group {
     border: none;
     margin: 0;
     margin-bottom: 35px;
     padding: 0;
+    @media screen and (min-width: $tablet-size) {
+      margin-bottom: 50px;
+    }
     &:last-child { margin-bottom: 0; }
     &--top {
       margin-bottom: 45px;
@@ -43,6 +54,9 @@
   &__container {
     display: flex;
     flex-direction: column;
+    &--contacts {
+      margin-bottom: 35px;
+    }
     @media screen and (min-width: $tablet-size) {
       align-items: flex-start;
       flex-direction: row;
@@ -60,10 +74,15 @@
     text-transform: uppercase;
     white-space: nowrap;
     width: 100%;
-    &--contacts { margin-bottom: 10px; }
+    &--contacts {
+      margin-bottom: 10px;
+      @media screen and (min-width: $tablet-size) {
+        margin-bottom: 0;
+      }
+    }
     @media screen and (min-width: $tablet-size) {
       padding: 0 0 0 50px;
-      width: 25%;
+      width: 28%;
     }
     &::after {
       background-color: $bg-color-lightGreen;
@@ -82,11 +101,15 @@
     flex-direction: column;
     @media screen and (min-width: $tablet-size) {
       padding-right: 50px;
+      width: 72%;
     }
     &--contacts { margin-bottom: 35px; }
     &--inner {
       padding: 0 30px;
       position: relative;
+      @media screen and (min-width: $tablet-size) {
+        padding: 0 50px 0 0;
+      }
     }
     &--checkbox {
       @media screen and (min-width: $tablet-size) {
@@ -94,7 +117,6 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 75%;
       }
     }
   }
@@ -117,7 +139,7 @@
       &:not(:last-child) { margin-bottom: 40px; }
       @media screen and (min-width: $tablet-size) {
         padding-right: 10px;
-        width: 40%;
+        width: 50%;
         &:not(:nth-child(n+5)) { margin-bottom: 50px; }
         &:nth-child(n+5) { margin-bottom: 0; }
       }
@@ -201,14 +223,19 @@
   }
   &__label {
     align-items: center;
+    cursor: pointer;
     display: flex;
     font-family: $main-font;
     font-size: 17px;
     line-height: 18px;
+    &--fio {
+      @media screen and (min-width: $tablet-size) {
+        padding-right: 25px;
+      }
+    }
     @media screen and (min-width: $tablet-size) {
       font-size: 19px;
       line-height: 18px;
-      word-break: break-all;
     }
   }
   &__text {
@@ -217,6 +244,11 @@
     padding: 0 30px;
     &:not(:last-child) {
       margin-bottom: 23px;
+    }
+    @media screen and (min-width: $tablet-size) {
+      align-items: flex-start;
+      flex-direction: row;
+      padding: 0;
     }
   }
   &__input {
@@ -227,7 +259,15 @@
     line-height: 20px;
     padding: 16px 10px 16px 0;
     width: 100%;
-    &--contacts { padding-right: 50px; }
+    @media screen and (min-width: $tablet-size) {
+      padding: 0 10px 16px 20px;
+    }
+    &--contacts {
+      padding-right: 50px;
+      @media screen and (min-width: $tablet-size) {
+        background-color: #f1f1f1;
+      }
+    }
     &::placeholder {
       color: $base-text-color;
       font-size: 17px;
@@ -241,14 +281,25 @@
     &--telephone {
       right: 40px;
       top: calc(50% - 13px);
+      @media screen and (min-width: $tablet-size) {
+        right: 60px;
+        top: 0;
+      }
     }
     &--email {
       right: 30px;
       top: 10px;
+      @media screen and (min-width: $tablet-size) {
+        right: 50px;
+        top: 0;
+      }
     }
   }
   &__textarea {
     padding: 0 30px;
+    @media screen and (min-width: $tablet-size) {
+      padding: 0;
+    }
   }
   &__wishes {
     border: 2px solid $black;
@@ -270,5 +321,25 @@
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 30px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 17px;
+      line-height: 30px;
+      margin: 0;
+      order: 2;
+    }
+  }
+  &__button {
+    @media screen and (min-width: $tablet-size) {
+      flex-basis: 35%;
+    }
+  }
+  &__bottom {
+    .container {
+      @media screen and (min-width: $tablet-size) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
 }
