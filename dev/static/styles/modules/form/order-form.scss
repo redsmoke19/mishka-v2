@@ -54,12 +54,17 @@
   &__container {
     display: flex;
     flex-direction: column;
-    &--contacts {
-      margin-bottom: 35px;
-    }
     @media screen and (min-width: $tablet-size) {
       align-items: flex-start;
       flex-direction: row;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 auto;
+      padding: 0 50px;
+      width: 1150px;
+    }
+    &--contacts {
+      margin-bottom: 35px;
     }
   }
   &__title {
