@@ -5,32 +5,32 @@ let imagemin = require('gulp-imagemin'),
     imgPATH = {
         "input": ["./dev/static/images/**/*.{png,jpg,gif,svg}",
             '!./dev/static/images/svg/*'],
-        "ouput": "./build/static/images/"
+        "output": "./build/static/images/"
     };
 
 module.exports = function () {
     $.gulp.task('img:dev', () => {
         return $.gulp.src(imgPATH.input)
-            .pipe($.gulp.dest(imgPATH.ouput));
+            .pipe($.gulp.dest(imgPATH.output));
     });
 
     $.gulp.task('img:build', () => {
         return $.gulp.src(imgPATH.input)
-            .pipe(cache(imagemin([
+            .pipe(imagemin([
                 imagemin.gifsicle({interlaced: true}),
-                imagemin.jpegtran({progressive: true}),
                 imageminJpegRecompress({
-                    loops: 5,
+                    loops:4,
                     min: 70,
                     max: 75,
-                    quality: 'medium'
+                    quality:'medium'
                 }),
+                imagemin.optipng(),
                 imagemin.svgo(),
                 imagemin.optipng({optimizationLevel: 3}),
-                pngquant({quality: '65-70', speed: 5})
+                pngquant({quality: [0.65, 0.7], speed: 5})
             ], {
                 verbose: true
-            })))
-            .pipe($.gulp.dest(imgPATH.ouput));
+            }))
+            .pipe($.gulp.dest(imgPATH.output));
     });
 };

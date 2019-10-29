@@ -7,7 +7,7 @@ let plumber = require('gulp-plumber'),
     rename = require('gulp-rename'),
     stylesPATH = {
       "input": "./dev/static/styles/",
-      "ouput": "./build/static/css/"
+      "output": "./build/static/css/"
   };
 
 module.exports = function () {
@@ -17,31 +17,31 @@ module.exports = function () {
     .pipe(sourcemaps.init())
     .pipe(scss())
     .pipe(autoprefixer({
-      browsers: ['last 3 version']
+        overrideBrowserslist: ['last 3 version']
     }))
     .pipe(sourcemaps.write())
     .pipe(rename('styles.min.css'))
-    .pipe($.gulp.dest(stylesPATH.ouput))
+    .pipe($.gulp.dest(stylesPATH.output))
     .on('end', $.browserSync.reload);
 });
   $.gulp.task('styles:build', () => {
     return $.gulp.src(stylesPATH.input + 'styles.scss')
     .pipe(scss())
     .pipe(autoprefixer({
-      browsers: ['last 3 version']
+        overrideBrowserslist: ['last 3 version']
     }))
     .pipe(csscomb())
-    .pipe($.gulp.dest(stylesPATH.ouput))
+    .pipe($.gulp.dest(stylesPATH.output))
   });
   $.gulp.task('styles:build-min', () => {
     return $.gulp.src(stylesPATH.input + 'styles.scss')
     .pipe(scss())
     .pipe(autoprefixer({
-      browsers: ['last 3 version']
+        overrideBrowserslist: ['last 3 version']
     }))
     .pipe(csscomb())
     .pipe(csso())
     .pipe(rename('styles.min.css'))
-    .pipe($.gulp.dest(stylesPATH.ouput))
+    .pipe($.gulp.dest(stylesPATH.output))
   });
 };
