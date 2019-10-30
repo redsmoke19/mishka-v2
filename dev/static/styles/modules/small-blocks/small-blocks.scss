@@ -28,7 +28,7 @@
     padding-top: 100px;
     padding-bottom: 80px;
     &::before {
-      background: url("/static/images/general/bg-zigzag-fill.svg") repeat-x 50% 100%;
+      background: url("../images/general/bg-zigzag-fill.svg") repeat-x 50% 100%;
       bottom: -16px;
       content: "";
       height: 24px;

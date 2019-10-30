@@ -234,7 +234,7 @@
     &:checked {
       + label {
         &::after {
-          background: url('/static/images/general/tick.svg') no-repeat center;
+          background: url('../images/general/tick.svg') no-repeat center;
           content: "";
           height: 20px;
           left: 37px;
